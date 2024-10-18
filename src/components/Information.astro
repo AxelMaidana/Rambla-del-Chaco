@@ -1,0 +1,61 @@
+---
+// src/components/Information.astro
+const { id } = Astro.props;
+---
+
+<section class="container mx-auto px-4 py-6" id={id}>
+    <article class="mt-6 flex flex-col md:flex-row items-center md:items-start">
+        <div class="flex-grow text-start mb-4 md:mb-0 md:mr-4">
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Information</h1>
+            <p class="text-base">
+                En el sector norte de la ciudad, la vereda oeste que
+                corre a lo largo de la Avenida de los Inmigrantes no
+                está cortada por calles, sino que sigue en una suerte
+                de cinta infinita donde no hay edificación tras la línea
+                de construcción, ni casas ni comercios, sino un ralo
+                e intenso verde que enmarcan un paisaje único.
+                <span class="hidden md:inline"> La Rambla de las Esculturas, antesala al MUSEUM, se presenta como un recorrido peatonal que exige cierta disposición del caminante: control de la ansiedad, pulmones oxigenados, mirada perspicaz y ganas de disfrute. El resultado es una caminata que no es solo desandar, sino una dosis bien generosa de recreación luminosa con el arte a través de esculturas que, como mojón acompasado, va trascendiendo al ejercicio mismo.</span>
+            </p>
+            <button 
+                class="text-blue-500 hover:underline mt-2"
+                onclick="document.getElementById('more-info').classList.toggle('hidden')"
+            >
+                Ver más
+            </button>
+            <p id="more-info" class="hidden text-base mt-2">
+                La Rambla de las Esculturas, antesala al MUSEUM, se presenta como un recorrido peatonal que exige cierta disposición del caminante: control de la ansiedad, pulmones oxigenados, mirada perspicaz y ganas de disfrute. El resultado es una caminata que no es solo desandar, sino una dosis bien generosa de recreación luminosa con el arte a través de esculturas que, como mojón acompasado, va trascendiendo al ejercicio mismo.
+            </p>
+        </div>
+        <img src="/asd.jpg" alt="Rambla de las Esculturas" class="w-60 h-60 rounded-xl object-cover shadow-lg shadow-black/70 transition duration-500 hover:scale-105 hover:shadow-xl hover:shadow-black md:ml-4 md:mt-0 mt-4">
+    </article>
+
+    <!-- Línea de separación horizontal -->
+    <div class="w-full h-px bg-gray-300 my-16"></div>
+    <!-- Línea de separación horizontal -->
+
+    <article class="flex flex-col md:flex-row items-center md:items-start">
+        <img src="/museo.jpg" alt="Parque de las Esculturas" class="w-60 h-60 rounded-xl object-cover shadow-lg shadow-black/70 transition duration-500 hover:scale-105 hover:shadow-xl hover:shadow-black md:mr-4 mb-4 md:mb-0">
+        <div class="flex-grow text-start md:text-end">
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Parque de las Esculturas</h1>
+            <p class="text-base">
+                Comprende unos 650 metros, iniciando en la avenida
+                Lavalle y termina en el Domo del Centenario, donde se
+                puede apreciar más de 30 esculturas de mármol y
+                madera —especialmente iluminadas con criterios
+                luminotécnicos de avanzada— realizadas por diferentes
+                artistas nacionales e internacionales que participaron a
+                lo largo de estos años.
+                <span class="hidden md:inline"> Su diseño es obra del consagrado paisajista argentino Pradial Gutiérrez, quien elaboró esta parquización artística y natural en el año 2012 por invitación de la Fundación Urunday.</span>
+            </p>
+            <button 
+                class="text-blue-500 hover:underline mt-2"
+                onclick="document.getElementById('more-park-info').classList.toggle('hidden')"
+            >
+                Ver más
+            </button>
+            <p id="more-park-info" class="hidden text-base mt-2">
+                Su diseño es obra del consagrado paisajista argentino Pradial Gutiérrez, quien elaboró esta parquización artística y natural en el año 2012 por invitación de la Fundación Urunday.
+            </p>
+        </div>
+    </article>
+</section>
